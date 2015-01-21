@@ -7,4 +7,5 @@ curl -O http://rpms.famillecollet.com/enterprise/remi-release-6.rpm && \
 rpm -Uvh remi-release-6.rpm
 ADD etc /etc
 RUN \
-yum update -y
+yum update -y && \
+yum clean all
