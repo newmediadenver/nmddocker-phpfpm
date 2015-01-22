@@ -27,3 +27,6 @@ php-soap \
 php-pgsql \
 php-xml && \
 yum clean -y all
+VOLUME ["/var/www"]
+CMD ["/usr/sbin/php-fpm", "-F"]
+EXPOSE 9000
