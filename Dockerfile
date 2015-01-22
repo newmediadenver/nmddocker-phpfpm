@@ -4,6 +4,7 @@ ADD RPM-GPG-KEY-EPEL-6 /etc/pki/tls/certs/RPM-GPG-KEY-EPEL-6
 RUN \
 yum install -y epel-release && \
 rpm --import /etc/pki/tls/certs/RPM-GPG-KEY-remi && \
+rpm --import /etc/pki/tls/certs/RPM-GPG-KEY-EPEL-6 && \
 rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 ADD etc /etc
 RUN \
