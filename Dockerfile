@@ -26,7 +26,9 @@ php-pecl-memcached \
 php-soap \
 php-pgsql \
 php-xml && \
-yum clean -y all
+yum clean -y all && \
+curl -sS https://getcomposer.org/installer | php && \
+mv composer.phar /usr/local/bin/composer
 VOLUME ["/var/www"]
 CMD ["/usr/sbin/php-fpm", "-F"]
 EXPOSE 9000
